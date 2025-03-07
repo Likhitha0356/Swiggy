@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Style Header</title>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.12.0/framer-motion.umd.min.js"></script>
+    <style>
+        body {
+            background-color: #f3f4f6;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ff5200;
+            padding: 1rem 2rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .dropdown {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .search-box {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .cart-icon, .search-icon {
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .cart-icon:hover, .search-icon:hover {
+            transform: scale(1.2);
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .menu-button {
+            font-size: 2rem;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .container h2 {
+            color: #ff5200;
+            margin-bottom: 20px;
+        }
+
+        .signin-form label {
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .signin-form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .signin-form .forgot-password {
+            text-align: right;
+            display: block;
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+
+        .signin-form .forgot-password a {
+            text-decoration: none;
+            color: #ff5200;
+        }
+
+        .signin-form button {
+            background: #ff5200;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .signin-form button:hover {
+            background: #e64800;
+        }
+
+        .signin-form .signup-link {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .signin-form .signup-link a {
+            text-decoration: none;
+            color: #ff5200;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #ff5200;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        </style>
+        </head>
+        <body>
+            <header class="header">
+                <div class="left-section">
+                    <img src="logo.jpeg" alt="Swiggy Icon" class="logo">
+                    <h1>Swiggy</h1>
+                    <select class="dropdown">
+                        <option>Location 1</option>
+                        <option>Location 2</option>
+                    </select>
+                </div>
+                <nav class="nav-links">
+                    <a href="#"><a href="offers.html">Offers</a><i class="fa-solid fa-percent"></i></a>
+                    <a href="#">Help <a href="help.html"></a><i class="fa-solid fa-circle-info"></i></a>
+                    <a href="#">Sign In <a href="signin.html"></a><i class="fa-solid fa-circle-user"> </i></a>
+                    
+                    <a href="#" class="cart-icon"> Cart <a href="cart.html"></a><i class="fa-solid fa-cart-shopping"></i></a>
+                    <input type="text" placeholder="Search..." class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </nav>
+                <div class="mobile-menu">
+                    <button class="menu-button">&#9776;</button>
+                </div>
+            </header>
+            <div class="container">
+                <h2>Sign In</h2>
+        
+                <form class="signin-form">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+        
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+        
+                    <span class="forgot-password"><a href="#">Forgot Password?</a></span>
+        
+                    <button type="submit">Sign In</button>
+        
+                    <div class="signup-link">
+                        Don't have an account? <a href="signup.html">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h3>About Us</h3>
+                        <p>Swiggy brings your favorite restaurants to your doorstep. Enjoy fast and convenient food delivery!</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Swiggy One</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="#">Help & Support</a></li>
+                            <li><a href="#">Partner with Us</a></li>
+                            <li><a href="#">Ride with Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section social">
+                        <h3>Follow Us</h3>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Swiggy. All Rights Reserved.</p>
+                </div>
+            </footer>
+            
+        
+        </body>
+        </html>
+        
